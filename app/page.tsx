@@ -9,17 +9,25 @@ import { SignInButton, SignUpButton } from "@clerk/nextjs";
 import { Link, BarChart3, Zap, Shield } from "lucide-react";
 
 export default function Home() {
-  const { isSignedIn } = useUser();
+  const { isLoaded, isSignedIn } = useUser();
   const router = useRouter();
 
   useEffect(() => {
-    if (isSignedIn) {
+    if (isLoaded && isSignedIn) {
       router.push("/dashboard");
     }
-  }, [isSignedIn, router]);
+  }, [isLoaded, isSignedIn, router]);
+
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+      </div>
+    );
+  }
 
   if (isSignedIn) {
-    return null; // or a loading spinner
+    return null;
   }
 
   return (
