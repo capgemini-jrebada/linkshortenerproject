@@ -66,6 +66,7 @@ For comprehensive coding standards and best practices, refer to the modular docu
 - Implement proper error handling and loading states
 - Maintain accessibility standards
 - Keep code DRY and well-documented
+- NEVER use middleware.ts as it is deprecated in Next.js 16; use proxy.ts instead
 
 ## Getting Started
 
