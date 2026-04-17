@@ -31,18 +31,21 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <ClerkProvider>
-          <header className="flex justify-end gap-2 p-4">
-            <Show when="signed-out">
-              <SignInButton mode="modal">
-                <Button variant="outline">Sign in</Button>
-              </SignInButton>
-              <SignUpButton mode="modal">
-                <Button>Sign up</Button>
-              </SignUpButton>
-            </Show>
-            <Show when="signed-in">
-              <UserButton />
-            </Show>
+          <header className="flex justify-between items-center p-4">
+            <h1 className="text-2xl font-bold">Link Shortener</h1>
+            <div className="flex gap-2">
+              <Show when="signed-out">
+                <SignInButton mode="modal">
+                  <Button variant="outline">Sign in</Button>
+                </SignInButton>
+                <SignUpButton mode="modal">
+                  <Button>Sign up</Button>
+                </SignUpButton>
+              </Show>
+              <Show when="signed-in">
+                <UserButton />
+              </Show>
+            </div>
           </header>
           {children}
         </ClerkProvider>

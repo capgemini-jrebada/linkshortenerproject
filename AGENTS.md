@@ -1,7 +1,7 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data.
 <!-- END:nextjs-agent-rules -->
 
 # Agent Instructions for Link Shortener Project
@@ -41,14 +41,13 @@ Follow the established project structure:
 - `components/` - Reusable React components
 - `db/` - Database schemas and connections
 - `lib/` - Utility functions
-- `docs/` - Project documentation
 
 ## Detailed Guidelines
 
-For comprehensive coding standards and best practices, refer to the modular documentation in the `/docs` directory. It is **INCREDIBLY IMPORTANT** to ALWAYS read the relevant individual instructions files within the `/docs` directory BEFORE generating ANY code:
-
-- [Authentication Guidelines](docs/authentication.md)
-- [UI Components Guidelines](docs/ui-components.md) 
+- [Authentication Guidelines](.github/instructions/authentication.instructions.md)
+- [Data Fetching Guidelines](.github/instructions/data-fetching.instructions.md)
+- [UI Components Guidelines](.github/instructions/ui-components.instructions.md)
+- [Data Mutations Guidelines](.github/instructions/data-mutations.instructions.md) 
 
 
 ## Development Workflow
